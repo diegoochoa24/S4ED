@@ -1,10 +1,9 @@
-#ifndef _HEAP_H
-#define _HEAP_H
+#ifndef HEAP_H
+#define HEAP_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "../tree/tree.h"
-
 
 //Heap structures
 typedef enum {
@@ -14,8 +13,7 @@ typedef enum {
 
 typedef struct HeapTree
 {
-    TreeNode *root;
-    int num_nodes;
+    Tree *tree;
     HeapType type;
 } HeapTree;
 
@@ -35,8 +33,15 @@ typedef struct Heap
     HeapType type;
 } Heap;
 
+//Heap prototypes
+void initialize_heap(Heap *heap);
+void add_node(Heap *heap);
+void set_heap_type(Heap *heap, HeapType type);
+void print_heap(Heap *heap);
 
-//Function prototypes
-
+//Priority prototypes
+//int compare_m2M(int m, int M);
+//int compare_M2m(int m, int M);
+//void set_priority(Mqueue *mqueue);
 
 #endif

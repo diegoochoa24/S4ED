@@ -1,5 +1,5 @@
-#ifndef _TREE_H
-#define _TREE_H
+#ifndef TREE_H
+#define TREE_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,11 +17,29 @@ typedef struct TreeNode
 typedef struct Tree
 {
     TreeNode *root;
+    int level;
     int num_nodes;
 } Tree;
 
+typedef enum {
+    EQUAL,
+    ACTUALFAVOR,
+    DATAFAVOR
+} CompareTreeData;
 
-//Function prototypes
 
+//Tree prototypes
+void initialize_tree(Tree *tree);
+TreeNode *create_tree_node(void *data);
+void insert_tree_data(Tree *tree, TreeNode **node, void *data);
+void print_tree(TreeNode* node, int level);
+
+
+#include "../queue/queue.h"
+//Tree data prototypes
+void cast_tree_data(TreeNode *node);
+CompareTreeData compare_tree_data(TreeNode *actual, QueueNode *data);
+void insert_data_into_tree(TreeNode *actual, QueueNode *data);
+void print_tree_data(TreeNode* node);
 
 #endif

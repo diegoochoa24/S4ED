@@ -1,8 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "core/structs.h"
-#include "core/functions.h"
 #include "app/components.h"
 
 int main(void){

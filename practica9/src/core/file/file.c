@@ -1,10 +1,14 @@
 #include <string.h>
-#include "structs.h"
-#include "functions.h"
 #include "../util/const.h"
+#include "../../app/components.h"
+#include "file.h"
 
+void cast_file_data(QueueNode *node){
+    node->data = (File*)calloc(1, sizeof(File));
+    node->data_size = sizeof(File);
+}
 
-void capture_file_data(File *file){
+int capture_file_data(File *file){
     char buffer[256];
 
     int ch;
@@ -14,29 +18,24 @@ void capture_file_data(File *file){
     if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
         file->filename = malloc(strlen(buffer) + 1);
         if (file->filename == NULL) {
-            printf("\n\rNo se pudo asignar memoria para el nombre del archivo\n");
-            return;
+            ERROR(MEMORY_ALLOCATION);
+            return FALSE;
         }
         strcpy(file->filename, buffer);
     } else {
         file->filename = NULL;
-        printf("\n\rNombre no valido...");
-        return;
+        ERROR(INVALID_VALUE);
+        return FALSE;
     }
 
     file->filename[strcspn(file->filename, "\n")] = 0;
 
     printf("\n\rDime la cantidad de paginas: ");
-    scanf("%d", &(file->pages));
+    scanf("%hu", &(file->pages));
+    return TRUE;
 }
 
-int print_file_data(File *file, int index){
-    if (file == NULL){
-        printf("\n\rNo valido...");
-        return FALSE;
-    }
-
-    printf("\n\r[%d] %s (%d)", index, file->filename, file->pages);
-
-    return TRUE;
+void print_file_data(File *file, int *index){
+    printf("\n\r[%d] %s (%d)", *index, file->filename, file->pages);
+    (*index)++;
 }

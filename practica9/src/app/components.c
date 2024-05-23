@@ -1,21 +1,18 @@
 
 #include "components.h"
-#include "../core/structs.h"
-#include "../core/functions.h"
+#include "../core/heap/heap.h"
 #include "../util/const.h"
 
 
 void initialize_app(App *app){
-    app->heap = (Mqueue*)calloc(1, sizeof(Mqueue));
-    initialize_mqueue(app->mqueue);
-    app->mqueue->priority = 0;
-    set_priority(app->mqueue);
+    app->heap = (Heap*)calloc(1, sizeof(Heap));
+    initialize_heap(app->heap);
+    set_heap_type(app->heap, MIN_HEAP);
 }
 
 void menu(App *app){
-
     system("cls"); //WINDOWS 
-    printf("\n\rP%d", app->mqueue->priority);
+    printf("\n\rP%d", app->heap->type);
     printf("\n\r [0] CAMBIAR PRIORIDAD");
     printf("\n\r [1] MOSTRAR COLA DE IMPRESION");
     printf("\n\r [2] AGREGAR ARCHIVO");
@@ -23,48 +20,39 @@ void menu(App *app){
     printf("\n\r [4] ELIMINAR TODOS LOS ARCHIVOS");
     printf("\n\r [5] PROCESAR/IMPRIMIR ARCHIVO");
     printf("\n\r [6] TERMINAR PROGRAMA");
-
-    int op = select_op();
+    int op = INPUT();
 
     switch (op)
     {
         case 0:
-            app->mqueue->priority = (app->mqueue->priority == 0) ? 1 : 0;
-            set_priority(app->mqueue);
-            sort_mqueue(app->mqueue);
+            HeapType changetype = (app->heap->type == MIN_HEAP) ? MAX_HEAP : MIN_HEAP;
+            set_heap_type(app->heap, changetype);
             break;
         case 1:
-            printf("\n\rCola de impresion (%d): ", app->mqueue->num_queues);
-            print_mqueue(app->mqueue);
+            printf("\n\rCola de impresion (%d): ", app->heap->size);
+            print_heap(app->heap);
             break;
         case 2:
-            add_option(app->mqueue);
+            add_node(app->heap);
             break;
         case 3:
-            delete_option(app->mqueue);
+            //delete_option(app->heap);
             break;
         case 4:
-            delete_all_files(app->mqueue, app->running);
+            //delete_all_files(app->heap, app->running);
             break;
         case 5:
-            process_file(app->mqueue);
+            //process_file(app->heap);
             break;
         case 6:
             app->running = FALSE;
             break;
         default:
-            printf("\n\rNo valido...");
+            ERROR(INVALID_VALUE);
             break;
     }
     printf("\n\n\r");
     system("pause"); //WINDOWS
-}
-
-int select_op(){
-    int op;
-    printf("\n\rEscoge opcion: ");
-    scanf("%d", &op);
-    return op;
 }
 
 void add_option(Mqueue *mqueue){
@@ -94,3 +82,28 @@ void delete_option(Mqueue *mqueue){
     delete_file(mqueue, found);
 }
 
+int INPUT(){
+    int op;
+    printf("\n[INPUT] ");
+    printf("\n\rEscoge una opcion: ");
+    scanf("%d", &op);
+    return op;
+}
+
+void INFO(InfoType type){
+    printf("\n[INFO]: ");
+    if (type == NO_FILES_ADDED)
+        printf("No se han añadido archivos. \n");
+}
+
+
+void ERROR(ErrorType type){
+    printf("\n[ERROR]: ");
+    if (type == MEMORY_ALLOCATION) {
+        printf("No se pudo asignar memoria. \n");
+    } else if (type == INVALID_VALUE) {
+        printf("Valor no válido. \n");
+    } else {
+        printf("Ha habido un error. \n");
+    }
+}

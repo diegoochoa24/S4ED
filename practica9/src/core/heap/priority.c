@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../core/structs.h"
-#include "../core/functions.h"
 #include "const.h"
 
-
+/*
 int compare_m2M(int m, int M){
     if (m < M){
         return TRUE;
@@ -28,3 +26,4 @@ void set_priority(Mqueue *mqueue){
         mqueue->compare = compare_M2m;
     }
 }
+*/
