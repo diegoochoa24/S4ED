@@ -1,0 +1,3 @@
+C:/Users/Diego Ochoa/CLionProjects/S4ED/cmake-build-debug/CMakeFiles/S4ED.dir
+C:/Users/Diego Ochoa/CLionProjects/S4ED/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Diego Ochoa/CLionProjects/S4ED/cmake-build-debug/CMakeFiles/rebuild_cache.dir
