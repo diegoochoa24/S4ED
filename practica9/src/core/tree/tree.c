@@ -7,7 +7,7 @@ void initialize_tree(Tree *tree){
     tree->num_nodes = 0;
 }
 
-TreeNode *create_tree_node(void *data){
+TreeNode *create_tree_node(){
     TreeNode *node = (TreeNode*)calloc(1, sizeof(TreeNode));
     cast_tree_data(node);
     node->left = NULL;
@@ -17,7 +17,7 @@ TreeNode *create_tree_node(void *data){
 
 void insert_tree_data(Tree *tree, TreeNode **node, void *data){
     if (*node == NULL){
-        *node = create_tree_node(data);
+        *node = create_tree_node();
         insert_data_into_tree(*node, data);
         tree->num_nodes++;
         return;
@@ -26,7 +26,6 @@ void insert_tree_data(Tree *tree, TreeNode **node, void *data){
     if (compare_tree_data(*node, data) == EQUAL)
         insert_data_into_tree(*node, data);
 
-
     if (compare_tree_data(*node, data) == ACTUALFAVOR){
         insert_tree_data(tree, &((*node)->left), data);
     } else {
@@ -34,8 +33,43 @@ void insert_tree_data(Tree *tree, TreeNode **node, void *data){
     }
 }
 
-void print_tree(TreeNode* node, int level)
-{
+void insert_tree_node(Tree *tree, TreeNode **node, TreeNode *new_node){
+    if (*node == NULL){
+        *node = new_node;
+        tree->num_nodes++;
+        return;
+    }
+
+    if (compare_tree_node(*node, new_node) == ACTUALFAVOR){
+        insert_tree_node(tree, &((*node)->left), new_node);
+    } else {
+        insert_tree_node(tree, &((*node)->right), new_node);
+    }
+}
+
+int calculate_tree_level(Tree *tree, TreeNode **node, int value){
+    if (*node == NULL){
+        return -1;
+    }
+
+    if (valor < node->valor){
+        if (raiz->izquierda == NULL)
+            return -1;
+        calcular_nivel(raiz->izquierda, valor, nivel+1);
+        nivel++;
+    } else if (valor == raiz->valor){
+        return nivel;
+    } else {
+        if (raiz->derecha == NULL)
+            return -1;
+        calcular_nivel(raiz->derecha, valor, nivel+1);
+        nivel++;
+    }
+}
+
+
+
+void print_tree(TreeNode* node, int level){
     int i;
     if (node != NULL)
     {

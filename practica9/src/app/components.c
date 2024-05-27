@@ -1,6 +1,7 @@
 
 #include "components.h"
 #include "../core/heap/heap.h"
+#include "../core/printer/print_queue.h"
 #include "../util/const.h"
 
 
@@ -33,7 +34,7 @@ void menu(App *app){
             print_heap(app->heap);
             break;
         case 2:
-            add_node(app->heap);
+            add_file_to_print_queue(app->heap);
             break;
         case 3:
             //delete_option(app->heap);
@@ -53,17 +54,6 @@ void menu(App *app){
     }
     printf("\n\n\r");
     system("pause"); //WINDOWS
-}
-
-void add_option(Mqueue *mqueue){
-    Node *node = create_node();
-    
-    if(node == NULL){
-        printf("\n\rValores no validos...");
-        return;
-    }
-
-    add_node(mqueue, node);
 }
 
 void delete_option(Mqueue *mqueue){
