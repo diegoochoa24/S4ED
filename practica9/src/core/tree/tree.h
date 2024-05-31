@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "../queue/queue.h"
 
 //Tree structures
 typedef struct TreeNode
@@ -34,8 +34,6 @@ TreeNode *create_tree_node();
 void insert_tree_data(Tree *tree, TreeNode **node, void *data);
 void print_tree(TreeNode* node, int level);
 
-
-#include "../queue/queue.h"
 //Tree data prototypes
 void cast_tree_data(TreeNode *node);
 void insert_data_into_tree(TreeNode *actual, QueueNode *data);

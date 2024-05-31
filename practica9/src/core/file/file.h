@@ -2,7 +2,7 @@
 #define FILE_H
 
 #include <stdlib.h>
-#include "../queue/queue.h"
+
 
 //File structure
 typedef struct File
@@ -11,6 +11,7 @@ typedef struct File
     short int pages;
 } File;
 
+#include "../queue/queue.h"
 
 //File prototypes
 void cast_file_data(QueueNode *node);

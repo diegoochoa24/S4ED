@@ -46,26 +46,26 @@ void insert_tree_node(Tree *tree, TreeNode **node, TreeNode *new_node){
         insert_tree_node(tree, &((*node)->right), new_node);
     }
 }
-
+/*
 int calculate_tree_level(Tree *tree, TreeNode **node, int value){
     if (*node == NULL){
         return -1;
     }
 
-    if (valor < node->valor){
-        if (raiz->izquierda == NULL)
+    if (valor < node->valor compare_tree_data( , )){
+        if ((*node)->left == NULL)
             return -1;
         calcular_nivel(raiz->izquierda, valor, nivel+1);
         nivel++;
     } else if (valor == raiz->valor){
         return nivel;
     } else {
-        if (raiz->derecha == NULL)
+        if ((*node)->right == NULL)
             return -1;
-        calcular_nivel(raiz->derecha, valor, nivel+1);
+        calculate_tree_level((*node)->right, valor, nivel+1);
         nivel++;
     }
-}
+}*/
 
 
 

@@ -1,6 +1,5 @@
 
 #include "components.h"
-#include "../core/heap/heap.h"
 #include "../core/printer/print_queue.h"
 #include "../util/const.h"
 
@@ -9,10 +8,11 @@ void initialize_app(App *app){
     app->heap = (Heap*)calloc(1, sizeof(Heap));
     initialize_heap(app->heap);
     set_heap_type(app->heap, MIN_HEAP);
+    app->running = 1;
 }
 
 void menu(App *app){
-    system("cls"); //WINDOWS 
+    //system("cls"); //WINDOWS
     printf("\n\rP%d", app->heap->type);
     printf("\n\r [0] CAMBIAR PRIORIDAD");
     printf("\n\r [1] MOSTRAR COLA DE IMPRESION");
@@ -53,9 +53,9 @@ void menu(App *app){
             break;
     }
     printf("\n\n\r");
-    system("pause"); //WINDOWS
+    //system("pause"); //WINDOWS
 }
-
+/*
 void delete_option(Mqueue *mqueue){
     if (mqueue->start == NULL){
         printf("\n\rNo hay archivos...");
@@ -70,7 +70,7 @@ void delete_option(Mqueue *mqueue){
     File *found = find_file(mqueue, op);  
 
     delete_file(mqueue, found);
-}
+}*/
 
 int INPUT(){
     int op;

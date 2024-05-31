@@ -8,6 +8,7 @@ include_directories(src/core)
 include_directories(src/core/file)
 include_directories(src/core/heap)
 include_directories(src/core/queue)
+include_directories(src/core/printer)
 include_directories(src/core/tree)
 include_directories(src/util)
 
