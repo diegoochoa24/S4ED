@@ -19,7 +19,7 @@ typedef struct HeapTree
 
 typedef struct HeapArray
 {
-    void *elements;
+    void **elements;
     size_t element_size;
     int size;
     HeapType type;
@@ -40,13 +40,16 @@ void add_node(Heap *heap);
 void set_heap_type(Heap *heap, HeapType type);
 void print_heap(Heap *heap);
 
-
 //Heap data prototypes
 void cast_heap_data(HeapArray *heapArray);
+void initialize_heap_array(HeapArray *heapArray);
+void insert_array_data(HeapArray *heapArray, QueueNode *new_node);
+void build_heap_tree(HeapTree *heapTree, HeapArray *heapArray);
 
 //Priority prototypes
 //int compare_m2M(int m, int M);
 //int compare_M2m(int m, int M);
 //void set_priority(Mqueue *mqueue);
+
 
 #endif

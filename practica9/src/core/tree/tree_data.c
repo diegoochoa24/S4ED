@@ -45,8 +45,8 @@ CompareTreeData compare_tree_node(TreeNode *actual, TreeNode *new_node){
 
 void print_tree_data(TreeNode* node)
 {
-    Queue *dataTree = node->data;
-    File *dataQueue = dataTree->front->data;
+    Queue *dataTree = (Queue *)node->data;
+    File *dataQueue = (File *)dataTree->front->data;
 
     printf("(%d)", dataQueue->pages);
 }

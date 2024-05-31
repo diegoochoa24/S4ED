@@ -15,6 +15,7 @@ int capture_file_data(File *file){
     while ((ch = getchar()) != '\n' && ch != EOF);
 
     printf("\n\rDime el nombre del archivo: ");
+    fflush(stdout);
     if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
         file->filename = malloc(strlen(buffer) + 1);
         if (file->filename == NULL) {
@@ -31,7 +32,9 @@ int capture_file_data(File *file){
     file->filename[strcspn(file->filename, "\n")] = 0;
 
     printf("\n\rDime la cantidad de paginas: ");
+    fflush(stdout);
     scanf("%hu", &(file->pages));
+    fflush(stdout);
     return TRUE;
 }
 

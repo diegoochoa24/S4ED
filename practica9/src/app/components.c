@@ -15,7 +15,7 @@ void menu(App *app){
     //system("cls"); //WINDOWS
     printf("\n\rP%d", app->heap->type);
     printf("\n\r [0] CAMBIAR PRIORIDAD");
-    printf("\n\r [1] MOSTRAR COLA DE IMPRESION");
+    printf("\n\r [1] MOSTRAR COLA DE IMPRESIÓN");
     printf("\n\r [2] AGREGAR ARCHIVO");
     printf("\n\r [3] ELIMINAR ARCHIVO");
     printf("\n\r [4] ELIMINAR TODOS LOS ARCHIVOS");
@@ -30,7 +30,6 @@ void menu(App *app){
             set_heap_type(app->heap, changetype);
             break;
         case 1:
-            printf("\n\rCola de impresion (%d): ", app->heap->size);
             print_heap(app->heap);
             break;
         case 2:
@@ -74,9 +73,11 @@ void delete_option(Mqueue *mqueue){
 
 int INPUT(){
     int op;
-    printf("\n[INPUT] ");
-    printf("\n\rEscoge una opcion: ");
+    printf("\n\rEscoge una opción: ");
+    printf("\n[INPUT]: ");
+    fflush(stdout);
     scanf("%d", &op);
+    fflush(stdout);
     return op;
 }
 
