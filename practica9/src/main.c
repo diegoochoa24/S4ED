@@ -13,6 +13,6 @@ int main(void){
     //delete_all_files(app.mqueue, app.running);
     //free(app.mqueue);
 
-    printf("\n\rii");
+    printf("\n\riii");
     return 0;
 }
