@@ -33,8 +33,12 @@ add_executable(S4ED9
 )
 
 add_executable(S4ED10
-        practica10/src/Hash.h
-        practica10/src/Main.c
-        practica10/src/Movie.c
-        practica10/src/Movie.h
+        practica10/src/app/components.c
+        practica10/src/app/components.h
+        practica10/src/core/hash.c
+        practica10/src/core/hash.h
+        practica10/src/core/movie.c
+        practica10/src/core/movie.h
+        practica10/src/util/const.h
+        practica10/src/main.c
 )

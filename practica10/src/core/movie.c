@@ -1,4 +1,4 @@
-#include "Movie.h"
+#include "movie.h"
 
 Movie** create_movies(void)
 {
@@ -11,7 +11,7 @@ Movie** create_movies(void)
         {5,"Inception\0",2010,88},
         {6,"Tenet\0",2020,73},
         {7,"Once Upon a Time... In Hollywood\0",2019,76},
-        {8,"Inglourious Basterds\0",2009,84},
+        {8,"Inglorious Bastards\0",2009,84},
         {9,"The Lord of the Rings: The Return of the King\0",2003,90},
         {10,"The Wolf of Wall Street\0",2013,82},
         {11,"Disturbia\0",2007,68},
@@ -123,7 +123,7 @@ Movie** create_movies(void)
 
 
 
-Movie* getMovie(Movie **movies,int index)
+Movie* get_movie(Movie **movies,int index)
 {
     if(index >= 0 && index <= (SIZE_DATA-1))
         return movies[index];
@@ -132,9 +132,8 @@ Movie* getMovie(Movie **movies,int index)
 
 }
 
-void printMovie(Movie *movie)
+void print_movie(Movie *movie)
 {
     printf("%-3d | %-50s | %d | %d ",movie->id, movie->name,movie->release_date,movie->rating);
-    //printf("%-2d | %-48s | %d | %d",pelicula->id,pelicula->nombre,pelicula->fecha,pelicula->calificacion);
 }
 

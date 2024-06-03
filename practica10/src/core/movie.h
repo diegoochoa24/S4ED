@@ -11,17 +11,13 @@ typedef struct
 {
     int id;
     char *name;
-    short int release_date;
-    short int rating;
+    int release_date;
+    int rating;
 }Movie;
 
-
-
-//FUNCIONES DE PELICULAS
+//Movie functions
 Movie** create_movies(void);
-void printMovie(Movie *movie);
-Movie* getMovie(Movie **movies,int index);
-
-
+void print_movie(Movie *movie);
+Movie* get_movie(Movie **movies,int index);
 
 #endif //MOVIE_H

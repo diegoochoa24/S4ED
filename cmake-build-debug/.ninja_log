@@ -1,0 +1,20 @@
+# ninja log v6
+5	80	7390924077466065	CMakeFiles/S4ED10.dir/practica10/src/core/movie.c.obj	2a3505f4cd42ad96
+2	193	7390898258220368	build.ninja	3bfb0fa237744755
+4	88	7391011012751962	CMakeFiles/S4ED10.dir/practica10/src/app/components.c.obj	97ea8405b08237d5
+16	95	7391001493281182	CMakeFiles/S4ED10.dir/practica10/src/main.c.obj	1cdbb99681ca0567
+89	171	7391011013596009	S4ED10.exe	5cc2dcd6d46120dd
+10	99	7391001493229345	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+6	88	7391013821113846	CMakeFiles/S4ED10.dir/practica10/src/app/components.c.obj	97ea8405b08237d5
+11	93	7391013821160222	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+94	176	7391013821987784	S4ED10.exe	5cc2dcd6d46120dd
+4	88	7391015103395455	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+88	172	7391015104234498	S4ED10.exe	5cc2dcd6d46120dd
+4	92	7391015417575831	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+93	171	7391015418459707	S4ED10.exe	5cc2dcd6d46120dd
+15	87	7391024670647772	CMakeFiles/S4ED10.dir/practica10/src/main.c.obj	1cdbb99681ca0567
+4	88	7391024670541180	CMakeFiles/S4ED10.dir/practica10/src/app/components.c.obj	97ea8405b08237d5
+10	92	7391024670595694	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+92	173	7391024671413899	S4ED10.exe	5cc2dcd6d46120dd
+4	90	7391026395850387	CMakeFiles/S4ED10.dir/practica10/src/core/hash.c.obj	3ab8a944876e976b
+91	170	7391026396715075	S4ED10.exe	5cc2dcd6d46120dd
