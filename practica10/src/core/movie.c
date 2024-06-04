@@ -137,3 +137,12 @@ void print_movie(Movie *movie)
     printf("%-3d | %-50s | %d | %d ",movie->id, movie->name,movie->release_date,movie->rating);
 }
 
+
+void delete_array_movies(Movie ***movies, int size){
+    for(int i = 0; i < size; i++){
+        free((*movies)[i]);
+    }
+
+    free(*movies);
+}
+

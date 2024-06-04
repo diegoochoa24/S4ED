@@ -20,4 +20,6 @@ Movie** create_movies(void);
 void print_movie(Movie *movie);
 Movie* get_movie(Movie **movies,int index);
 
+void delete_array_movies(Movie ***movies, int size);
+
 #endif //MOVIE_H

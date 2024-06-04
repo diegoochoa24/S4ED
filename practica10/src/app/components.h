@@ -4,6 +4,8 @@
 #include "../core/hash.h"
 
 typedef struct app {
+    int cant_movies;
+    Movie **movies;
     HashTable *hash_table_id;
     HashTable *hash_table_name;
     int next_id;

@@ -2,22 +2,25 @@
 #include "../util/const.h"
 
 void initialize_app(App *app) {
-    app->hash_table_id = create_hash_table(SIZE_DATA + 100, hash_id);
+    app->cant_movies = 0;
+    app->hash_table_id = create_hash_table(SIZE_DATA, hash_id);
     app->hash_table_id->type = INT_TYPE;
     app->hash_table_name = create_hash_table(SIZE_DATA * 4, hash_name);
     app->hash_table_name->type = STRING_TYPE;
     app->next_id = 106;
     app->running = TRUE;
 
-    Movie **movies = create_movies();
+    app->movies = create_movies();
     for (int i = 0; i < SIZE_DATA; i++) {
-        insert_movie(app->hash_table_id, movies[i]);
-        insert_movie(app->hash_table_name, movies[i]);
+        insert_movie(app->hash_table_id, app->movies[i]);
+        insert_movie(app->hash_table_name, app->movies[i]);
+        app->cant_movies++;
     }
 }
 
 void menu(App *app) {
     printf("\n\r PRÁCTICA 10: HASH");
+    printf("\n\r Factor de carga: %.2f", factor);
     printf("\n\r [0] MOSTRAR HASH ID");
     printf("\n\r [1] MOSTRAR HASH NOMBRE");
     printf("\n\r [2] BUSCAR PELÍCULA ID");
@@ -63,18 +66,65 @@ void menu(App *app) {
             year = INPUT("Introduce el año de la película");
             rating = INPUT("Introduce la calificación de la película");
 
-            movie = (Movie*)malloc(sizeof(Movie));
+            app->movies = realloc(app->movies, (app->cant_movies + 1) * sizeof(Movie*));
+            if (app->movies == NULL) {
+                ERROR(MEMORY_ALLOCATION);
+                break;
+            }
+
+            app->movies[app->cant_movies] = (Movie*)malloc(sizeof(Movie));
+            if (app->movies[app->cant_movies] == NULL) {
+                ERROR(MEMORY_ALLOCATION);
+                free(name);
+                break;
+            }
+
+            movie = app->movies[app->cant_movies];
             movie->id = app->next_id;
             movie->name = strdup(name);
+            if (movie->name == NULL) {
+                ERROR(MEMORY_ALLOCATION);
+                free(movie);
+                free(name);
+                break;
+            }
+
             movie->release_date = year;
             movie->rating = rating;
+            app->cant_movies++;
+
+            app->hash_table_id->table = realloc(app->hash_table_id->table, (app->hash_table_id->size + 1) * sizeof(Movie*));
+            if (app->hash_table_id->table == NULL) {
+                ERROR(MEMORY_ALLOCATION);
+                break;
+            }
+
+            app->hash_table_id->table[app->hash_table_id->size] = NULL;
+            app->hash_table_id->size++;
+
+            Movie **temp_table = realloc(app->hash_table_name->table, (app->hash_table_name->size + 4) * sizeof(Movie*));
+            if (temp_table == NULL) {
+                ERROR(MEMORY_ALLOCATION);
+                break;
+            }
+            app->hash_table_name->table = temp_table;
+
+            for (int i = app->hash_table_name->size; i < app->hash_table_name->size + 4; i++) {
+                app->hash_table_name->table[i] = NULL;
+            }
+            app->hash_table_name->size += 4;
 
             insert_movie(app->hash_table_id, movie);
             insert_movie(app->hash_table_name, movie);
 
+            remap_hash(&(app->hash_table_id));
+            remap_hash(&(app->hash_table_name));
+
             app->next_id++;
 
             INFO(MOVIE_ADDED);
+
+            free(name);
             break;
         case 5:
             delete_menu(app);
@@ -99,28 +149,31 @@ void delete_menu(App *app){
     int op = INPUT("Selecciona una opción");
 
     if (op == 1) {
-
         id = INPUT("Introduce el ID de la película");
         int eliminated = delete_movie_by_id(app->hash_table_id, app->hash_table_name, id, 0);
 
+        remap_hash(&(app->hash_table_id));
+        remap_hash(&(app->hash_table_name));
+
         if (eliminated == TRUE){
             INFO(MOVIE_DELETED);
         } else {
             ERROR(MOVIE_NOT_FOUND);
         }
-
-
     } else if (op == 2) {
-
         name = INPUT_STRING("Introduce el nombre de la película");
         int eliminated = delete_movie_by_name(app->hash_table_id, app->hash_table_name, name, 0);
+
+        remap_hash(&(app->hash_table_id));
+        remap_hash(&(app->hash_table_name));
+
         if (eliminated == TRUE){
             INFO(MOVIE_DELETED);
         } else {
             ERROR(MOVIE_NOT_FOUND);
         }
-        free(name);
 
+        free(name);
     } else {
         ERROR(OPTION_VALUE);
     }
