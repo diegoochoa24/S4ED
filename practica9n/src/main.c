@@ -43,7 +43,7 @@ typedef struct HeapTree {
 } HeapTree;
 
 typedef struct HeapArray {
-    File **elements;
+    Queue **elements;
     size_t element_size;
     int size;
     int capacity;
@@ -70,6 +70,11 @@ void heapify(HeapArray *heapArray, int i);
 void swap(File **a, File **b);
 void ensureCapacity(HeapArray *heapArray);
 void insertHeapArray(HeapArray *heapArray, File *file);
+
+void buildTreeFromHeapArray(HeapArray *heapArray, Tree *tree);
+TreeNode* buildTreeRecursive(File **elements, int size, int index);
+
+
 
 int main() {
     int choice;
@@ -256,7 +261,6 @@ void insertHeapArray(HeapArray *heapArray, File *file) {
     heapArray->elements[index] = file;
     heapArray->size++;
 
-    // Reajuste del heap
     while (index > 0) {
         int parentIndex = (index - 1) / 2;
         if (heapArray->type == MIN_HEAP) {
@@ -264,16 +268,57 @@ void insertHeapArray(HeapArray *heapArray, File *file) {
                 swap(&heapArray->elements[index], &heapArray->elements[parentIndex]);
                 index = parentIndex;
             } else {
-                break;  // El nuevo elemento está en la posición correcta
+                break;
             }
         } else {
             if (heapArray->elements[index]->pages > heapArray->elements[parentIndex]->pages) {
                 swap(&heapArray->elements[index], &heapArray->elements[parentIndex]);
                 index = parentIndex;
             } else {
-                break;  // El nuevo elemento está en la posición correcta
+                break;
             }
         }
     }
+}
+
+
+void buildTreeFromHeapArray(HeapArray *heapArray, Tree *tree) {
+    if (heapArray == NULL || tree == NULL) {
+        printf("Arreglo de heap o árbol no válidos.\n");
+        return;
+    }
+
+    // Liberar el árbol existente, si hay uno
+    if (tree->root != NULL) {
+        free(tree->root);
+        tree->root = NULL;
+        tree->num_nodes = 0;
+    }
+
+    // Construir el árbol a partir del arreglo de heap
+    tree->root = buildTreeRecursive(heapArray->elements, heapArray->size, 0);
+    tree->num_nodes = heapArray->size;
+}
+
+TreeNode* buildTreeRecursive(File **elements, int size, int index) {
+    if (index >= size) {
+        return NULL;
+    }
+
+    // Crear un nuevo nodo para el elemento en la posición actual
+    TreeNode *newNode = (TreeNode *)malloc(sizeof(TreeNode));
+    newNode->queue = NULL; // Inicializar la cola si es necesario
+    newNode->data_size = sizeof(File);
+
+    // Asignar el archivo al nodo
+    newNode->file = (File *)malloc(sizeof(File));
+    newNode->file->filename = strdup(elements[index]->filename);
+    newNode->file->pages = elements[index]->pages;
+
+    // Recursivamente construir los hijos izquierdo y derecho
+    newNode->left = buildTreeRecursive(elements, size, 2 * index + 1);
+    newNode->right = buildTreeRecursive(elements, size, 2 * index + 2);
+
+    return newNode;
 }
 
