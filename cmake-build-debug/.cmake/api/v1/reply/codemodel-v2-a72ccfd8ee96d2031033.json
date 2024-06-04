@@ -16,7 +16,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -32,7 +33,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -41,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "S4ED10::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-S4ED10-Debug-595b936e8c386dba7d75.json",
+					"jsonFile" : "target-S4ED10-Debug-d5d0a86cfd07b2ebdfe8.json",
 					"name" : "S4ED10",
 					"projectIndex" : 0
 				},
@@ -50,6 +52,13 @@
 					"id" : "S4ED9::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-S4ED9-Debug-3f4c6b4a46e6fb9ebb64.json",
 					"name" : "S4ED9",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "S4ED9N::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-S4ED9N-Debug-9bfbc639b04305c73ba9.json",
+					"name" : "S4ED9N",
 					"projectIndex" : 0
 				}
 			]

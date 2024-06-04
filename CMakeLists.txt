@@ -32,6 +32,11 @@ add_executable(S4ED9
         practica9/src/core/printer/print_queue.h
 )
 
+add_executable(S4ED9N
+        practica9n/src/main.c
+        practica9n/src/main.c
+)
+
 add_executable(S4ED10
         practica10/src/app/components.c
         practica10/src/app/components.h

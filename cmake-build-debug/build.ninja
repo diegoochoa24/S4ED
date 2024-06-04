@@ -138,6 +138,40 @@ build S4ED9.exe: C_EXECUTABLE_LINKER__S4ED9_Debug CMakeFiles/S4ED9.dir/practica9
   TARGET_PDB = S4ED9.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target S4ED9N
+
+
+#############################################
+# Order-only phony target for S4ED9N
+
+build cmake_object_order_depends_target_S4ED9N: phony || CMakeFiles/S4ED9N.dir
+
+build CMakeFiles/S4ED9N.dir/practica9n/src/main.c.obj: C_COMPILER__S4ED9N_unscanned_Debug C$:/Users/Diego$ Ochoa/CLionProjects/S4ED/practica9n/src/main.c || cmake_object_order_depends_target_S4ED9N
+  DEP_FILE = CMakeFiles\S4ED9N.dir\practica9n\src\main.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/app" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core/file" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core/heap" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core/queue" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core/printer" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/core/tree" -I"C:/Users/Diego Ochoa/CLionProjects/S4ED/practica9/src/util"
+  OBJECT_DIR = CMakeFiles\S4ED9N.dir
+  OBJECT_FILE_DIR = CMakeFiles\S4ED9N.dir\practica9n\src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target S4ED9N
+
+
+#############################################
+# Link the executable S4ED9N.exe
+
+build S4ED9N.exe: C_EXECUTABLE_LINKER__S4ED9N_Debug CMakeFiles/S4ED9N.dir/practica9n/src/main.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\S4ED9N.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = S4ED9N.exe
+  TARGET_IMPLIB = libS4ED9N.dll.a
+  TARGET_PDB = S4ED9N.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target S4ED10
 
 
@@ -222,6 +256,8 @@ build S4ED10: phony S4ED10.exe
 
 build S4ED9: phony S4ED9.exe
 
+build S4ED9N: phony S4ED9N.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -230,7 +266,7 @@ build S4ED9: phony S4ED9.exe
 #############################################
 # Folder: C:/Users/Diego Ochoa/CLionProjects/S4ED/cmake-build-debug
 
-build all: phony S4ED9.exe S4ED10.exe
+build all: phony S4ED9.exe S4ED9N.exe S4ED10.exe
 
 # =============================================================================
 # Built-in targets
