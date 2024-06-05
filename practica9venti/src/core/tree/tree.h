@@ -8,7 +8,7 @@
 //Tree structures
 typedef struct TreeNode
 {
-    Queue *queue;
+    void *data;
     size_t data_size;
     struct TreeNode *left;
     struct TreeNode *right;

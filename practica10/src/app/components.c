@@ -20,7 +20,6 @@ void initialize_app(App *app) {
 
 void menu(App *app) {
     printf("\n\r PRÁCTICA 10: HASH");
-    printf("\n\r Factor de carga: %.2f", factor);
     printf("\n\r [0] MOSTRAR HASH ID");
     printf("\n\r [1] MOSTRAR HASH NOMBRE");
     printf("\n\r [2] BUSCAR PELÍCULA ID");
@@ -53,12 +52,8 @@ void menu(App *app) {
             break;
         case 3:
             name = INPUT_STRING("Introduce el nombre de la película");
-            movie = search_movie_by_name(app->hash_table_name,  name);
-            if (movie != NULL) {
-                print_movie(movie);
-            } else {
-                ERROR(MOVIE_NOT_FOUND);
-            }
+            search_movie_by_name(app->hash_table_name,  name);
+
             free(name);
             break;
         case 4:

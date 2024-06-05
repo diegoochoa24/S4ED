@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="S4ED"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED9venti">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED9venti.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED9venti"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED9venti/fast">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED9venti.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED9venti/fast"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED9N">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED9N.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED9N"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED9N/fast">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED9N.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED9N/fast"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED10">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED10.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED10"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="S4ED10/fast">
+				<Option output="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/S4ED10.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/app"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/file"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/heap"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/queue"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/printer"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/core/tree"/>
+					<Add directory="C:/Users/daohl/CLionProjects/S4EDS/practica9/src/util"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 S4ED10/fast"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/daohl/AppData/Local/Programs/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/daohl/CLionProjects/S4EDS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/app/components.c">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/app/components.h">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/core/hash.c">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/core/hash.h">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/core/movie.c">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/core/movie.h">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/main.c">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica10/src/util/const.h">
+			<Option target="S4ED10"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9n/src/functions.h">
+			<Option target="S4ED9N"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9n/src/heap.c">
+			<Option target="S4ED9N"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9n/src/main.c">
+			<Option target="S4ED9N"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9n/src/structs.h">
+			<Option target="S4ED9N"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/app/components.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/app/components.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/file/file.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/file/file.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/heap/heap.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/heap/heap.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/heap/priority.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/printer/print_queue.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/printer/print_queue.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/queue/queue.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/queue/queue.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/queue/queue_data.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/tree/tree.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/tree/tree.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/core/tree/tree_data.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/main.c">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/practica9venti/src/util/const.h">
+			<Option target="S4ED9venti"/>
+		</Unit>
+		<Unit filename="C:/Users/daohl/CLionProjects/S4EDS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -154,7 +154,7 @@ Movie* search_movie_by_id(HashTable* hash_table, int id) {
     }
 }
 
-Movie* search_movie_by_name(HashTable* hash_table, char* name) {
+void search_movie_by_name(HashTable* hash_table, char* name) {
     int index = hash_name(name, hash_table->size);
 
     int new_index = index;
@@ -162,9 +162,12 @@ Movie* search_movie_by_name(HashTable* hash_table, char* name) {
 
     while (1) {
         if (hash_table->table[new_index] == NULL){
-            return NULL;
+            return;
         } else if (strcmp(hash_table->table[new_index]->name, name) == 0) {
-            return hash_table->table[new_index];
+            print_movie(hash_table->table[new_index]);
+            printf("\n");
+            new_index = rehash(hash_table, index, k);
+            k++;
         } else {
             new_index = rehash(hash_table, index, k);
             k++;

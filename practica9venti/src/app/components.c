@@ -12,6 +12,7 @@ void initialize_app(App *app){
 }
 
 void menu(App *app){
+    //system("cls"); //WINDOWS
     printf("\n\rP%d", app->heap->type);
     printf("\n\r [0] CAMBIAR PRIORIDAD");
     printf("\n\r [1] MOSTRAR COLA DE IMPRESIÓN");
@@ -35,7 +36,7 @@ void menu(App *app){
             add_file_to_print_queue(app->heap);
             break;
         case 3:
-            //delete_file_print_queue(app->heap);
+            //delete_option(app->heap);
             break;
         case 4:
             //delete_all_files(app->heap, app->running);
@@ -53,6 +54,7 @@ void menu(App *app){
     printf("\n\n\r");
     //system("pause"); //WINDOWS
 }
+
 
 int INPUT(){
     int op;

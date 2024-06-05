@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "../file/file.h"
-#include "tree.h"
+#include "../tree/tree.h"
 
 void cast_tree_data(TreeNode *node){
     node->data = (Queue*)calloc(1, sizeof(Queue));

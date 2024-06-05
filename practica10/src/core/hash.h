@@ -6,7 +6,6 @@
 #include <string.h>
 #include "movie.h"
 
-
 typedef int (*FunctionFolding)(void *, int); //POINTER TO A FUNCTION
 
 typedef enum {
@@ -33,7 +32,7 @@ void insert_movie(HashTable* hash_table, Movie* movie);
 int delete_movie_by_id(HashTable* hash_table_id, HashTable* hash_table_name, int id, int non);
 int delete_movie_by_name(HashTable* hash_table_id, HashTable* hash_table_name, char* name, int non);
 Movie* search_movie_by_id(HashTable* hash_table, int id);
-Movie* search_movie_by_name(HashTable* hash_table, char* name);
+void search_movie_by_name(HashTable* hash_table, char* name);
 void print_hash_table(HashTable* hash_table);
 void delete_hash_table(HashTable** hash_table);
 

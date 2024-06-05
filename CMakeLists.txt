@@ -12,29 +12,32 @@ include_directories(practica9/src/core/printer)
 include_directories(practica9/src/core/tree)
 include_directories(practica9/src/util)
 
-add_executable(S4ED9
-        practica9/src/app/components.c
-        practica9/src/app/components.h
-        practica9/src/core/file/file.c
-        practica9/src/core/file/file.h
-        practica9/src/core/heap/heap.c
-        practica9/src/core/heap/heap.h
-        practica9/src/core/heap/priority.c
-        practica9/src/core/queue/queue.c
-        practica9/src/core/queue/queue.h
-        practica9/src/core/tree/tree.c
-        practica9/src/core/tree/tree.h
-        practica9/src/util/const.h
-        practica9/src/main.c
-        practica9/src/core/printer/print_queue.c
-        practica9/src/core/tree/tree_data.c
-        practica9/src/core/queue/queue_data.c
-        practica9/src/core/printer/print_queue.h
+add_executable(S4ED9venti
+        practica9venti/src/app/components.c
+        practica9venti/src/app/components.h
+        practica9venti/src/core/file/file.c
+        practica9venti/src/core/file/file.h
+        practica9venti/src/core/heap/heap.c
+        practica9venti/src/core/heap/heap.h
+        practica9venti/src/core/heap/priority.c
+        practica9venti/src/core/queue/queue.c
+        practica9venti/src/core/queue/queue.h
+        practica9venti/src/core/tree/tree.c
+        practica9venti/src/core/tree/tree.h
+        practica9venti/src/util/const.h
+        practica9venti/src/main.c
+        practica9venti/src/core/printer/print_queue.c
+        practica9venti/src/core/tree/tree_data.c
+        practica9venti/src/core/queue/queue_data.c
+        practica9venti/src/core/printer/print_queue.h
 )
 
 add_executable(S4ED9N
+        practica9n/src/structs.h
+        practica9n/src/functions.h
+        practica9n/src/heap.c
         practica9n/src/main.c
-        practica9n/src/main.c
+        practica9n/src/heap.c
 )
 
 add_executable(S4ED10
